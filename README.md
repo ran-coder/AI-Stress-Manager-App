@@ -26,7 +26,7 @@
 # Visual App Workflow
 
 ```mermaid
-%%{init: {"fontSize": "40px"}}}%%
+%%{init: {"fontSize": "40px"}}%%
 flowchart TD
     A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
 
