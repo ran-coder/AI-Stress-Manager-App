@@ -22,7 +22,8 @@
 
 > **Diagram Description:**  
 > *Briefly explain what the diagram above illustrates (e.g., "The mindmap above highlights the core problem branches identified, mapping user pain points directly to our target feature modules.")*
-> flowchart TD
+'''
+flowchart TD
     A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
 
     B -->|Log new task| C[Log Task]
@@ -32,20 +33,24 @@
     E -->|Yes| F{Which severity stage?}
     F -->|Stage 1: mild| G[Soothing suggestion]
     F -->|Stage 2: elevated| H[Soothing suggestion<br/>+ task breakdown]
-    F -->|Stage 3: critical| I[Recovery mode: outdoor / social /<br/>sleep / "done enough today"]
+    F -->|Stage 3: critical| I[Recovery Mission: outdoor / social /<br/>sleep / "done enough today"]
     G --> B
     H --> B
     I --> B
     J --> B
 
-    B -->|Open AI Task Coach| K[AI Task Coach: chatbot interface]
-    K --> L{Engagement signals<br/>suggest overwhelm?}
-    L -->|No| S[Student manually picks<br/>a task to break down]
-    L -->|Yes| M["Coach asks: 'Feeling<br/>overwhelmed by this one?'"]
-    M --> N{Student confirms?}
+    B --> L{Engagement signals suggest<br/>overwhelm on a specific task?}
+    L -->|No| B
+    L -->|Yes| M["Prompt surfaces on homepage:<br/>'Feeling overwhelmed by this one?'"]
+    M --> N{Student answers yes?}
     N -->|No| B
-    N -->|Yes| O[Agent generates<br/>step-by-step plan]
+    N -->|Yes| K[Directed to AI Task Coach<br/>chatbot interface]
+
+    B -.->|Optional: student manually<br/>opens AI Task Coach| K2[AI Task Coach: chatbot interface]
+    K2 --> S[Student picks a task<br/>to break down]
     S --> O
+
+    K --> O[Agentic AI immediately<br/>generates personalized plan]
     O --> P[Checks back in later]
     P --> Q{Steps completed<br/>as planned?}
     Q -->|Yes| B
@@ -58,6 +63,8 @@
     U -->|No| W[Stable status shown]
     V --> B
     W --> B
+
+'''
 
 ---
 
