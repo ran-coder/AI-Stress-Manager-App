@@ -22,7 +22,10 @@
 
 > **Diagram Description:**  
 > *Briefly explain what the diagram above illustrates (e.g., "The mindmap above highlights the core problem branches identified, mapping user pain points directly to our target feature modules.")*
-'''
+
+# Visual App Workflow
+
+```mermaid
 flowchart TD
     A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
 
@@ -63,9 +66,7 @@ flowchart TD
     U -->|No| W[Stable status shown]
     V --> B
     W --> B
-
-'''
-
+```
 ---
 
 ### 2. Idea Evolution
