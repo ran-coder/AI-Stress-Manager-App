@@ -45,7 +45,7 @@ Our core features progressed through several key iterations based on technical c
 ## Feature: Task Logging & Check-Ins
 
 * **V1:** Task logging + workload % calculation + basic plan output
-* **Problem identified:** If a task passes its due date unmarked, the app has no way to tell whether the student simply forgot or is genuinely overwhelmed — treating both cases the same risks a false burnout signal.
+* **Problem identified:** If a task passes its due date unmarked, the app has no way to tell whether the student forgot or genuinely overwhelmed -> false burnout signal.
 * **V2 (ENHANCED):** Added a Check-In feature. When a task goes overdue unmarked, the app asks *"This one's overdue, what happened?"* with options (**Forgot about it** / **Still working on it** / **Too overwhelmed to start** / **Not a priority anymore**), classifying the cause before it affects the workload score.
 * **V3 (INTEGRATE):**  Instead of check-ins,  app passively tracks engagement signals (how many times a task is opened, edited, or ignored) to detect early signs of overwhelm. It surfaces a soft check-in: "Looks like you might be overwhelmed by this one?" If confirmed, the AI Task Coach is triggered automatically, generating a step-by-step breakdown personalized to the student's current workload and mental state.
 
