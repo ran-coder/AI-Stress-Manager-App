@@ -33,14 +33,14 @@
       "curve": "linear"
     },
     "themeVariables": {
-      "fontSize": "18px",
+      "fontSize": "20px",
       "nodePadding": 15,
       "edgeLabelBackground": "#ffffff"
     }
   }
 }%%
 flowchart TD
-    classDef default font-size:18px;
+    classDef default font-size:20px;
     
     linkStyle default stroke-width:3px;
 
