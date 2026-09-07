@@ -54,17 +54,16 @@ Our core features progressed through several key iterations based on technical c
 
 ## Feature: AI Task Coach & Staged Workload Intervention
 
-* **V1:** Task breakdown for complex tasks + soothing recommendations triggered by a single workload threshold.
+* **V1:** Soothing recommendations triggered by a single workload threshold.
 * **Problem identified:** A single on/off threshold treats mild and severe stress the same way, with no proportional response.
-* **V2 (REFINED):** Expanded into an AI Task Coach (chatbot-style comprehension help for complex tasks) plus a Staged Workload Intervention System. Workload severity broken into stages that escalate in both frequency and intervention type, culminating in a dedicated recovery mission mode at the most severe stage.
+* **V2 (REFINED):** A Staged Workload Intervention System. Workload severity broken into stages that escalate in both frequency and intervention type, culminating in a dedicated recovery mission mode at the most severe stage.
 
 ---
 
-## Feature: Time Tracking
+## Feature: Agentic AI Task Coach
 
-* **V1:** Manual start/stop timer per task. The longer the time takes to complete a task, the higher the chance of burnout.
-* **Problem identified:** Manual timing adds extra cognitive effort every time a user starts a task.
-* **V2 (REFINED):** Dropped the manual timer. Change it to a rough proxy for time spent, starting when a task is logged and ending when marked done, requiring zero extra effort from the user.
+* **V1:** A chatbot style AI that give breakdowns and helps with comprehension for complex tasks.
+* **V2 (REFINED):** A single AI agent that runs a multi-step reasoning loop rather than a one-time LLM response: it analyzes the flagged task and current workload context, decides what kind of breakdown is needed, generates a personalized step-by-step plan, then checks back in later ("did you finish step 1?") to dynamically adjust the remaining steps. 
 
 ---
 
