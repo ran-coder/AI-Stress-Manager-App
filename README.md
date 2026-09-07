@@ -52,7 +52,7 @@ Our core features progressed through several key iterations based on technical c
 
 ---
 
-## Feature: AI Task Coach & Staged Workload Intervention
+## Feature: Staged Workload Intervention
 
 * **V1:** Soothing recommendations triggered by a single workload threshold.
 * **Problem identified:** A single on/off threshold treats mild and severe stress the same way, with no proportional response.
