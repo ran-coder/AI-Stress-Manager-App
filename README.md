@@ -22,26 +22,50 @@
 
 > **Diagram Description:**  
 > *Briefly explain what the diagram above illustrates (e.g., "The mindmap above highlights the core problem branches identified, mapping user pain points directly to our target feature modules.")*
+> flowchart TD
+    A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
+
+    B -->|Log new task| C[Log Task]
+    C --> D[AI recalculates workload %]
+    D --> E{Workload exceeds<br/>threshold?}
+    E -->|No| J[Plan updated,<br/>no intervention]
+    E -->|Yes| F{Which severity stage?}
+    F -->|Stage 1: mild| G[Soothing suggestion]
+    F -->|Stage 2: elevated| H[Soothing suggestion<br/>+ task breakdown]
+    F -->|Stage 3: critical| I[Recovery mode: outdoor / social /<br/>sleep / "done enough today"]
+    G --> B
+    H --> B
+    I --> B
+    J --> B
+
+    B -->|Open AI Task Coach| K[AI Task Coach: chatbot interface]
+    K --> L{Engagement signals<br/>suggest overwhelm?}
+    L -->|No| S[Student manually picks<br/>a task to break down]
+    L -->|Yes| M["Coach asks: 'Feeling<br/>overwhelmed by this one?'"]
+    M --> N{Student confirms?}
+    N -->|No| B
+    N -->|Yes| O[Agent generates<br/>step-by-step plan]
+    S --> O
+    O --> P[Checks back in later]
+    P --> Q{Steps completed<br/>as planned?}
+    Q -->|Yes| B
+    Q -->|No| R[Agent adjusts<br/>remaining steps]
+    R --> B
+
+    B -->|View Burnout Forecast| T[Burnout Forecast:<br/>stress trajectory graph]
+    T --> U{Risk trending<br/>toward burnout?}
+    U -->|Yes| V[Alert + LLM explanation<br/>+ recommendation]
+    U -->|No| W[Stable status shown]
+    V --> B
+    W --> B
 
 ---
 
-### 2. Breadth of Exploration
-Before selecting our final approach, we evaluated multiple candidate concepts against feasibility and impact:
+### 2. Idea Evolution
+<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/347c4f44-fd85-44d3-940d-878c3ff09085" />
 
-| Concept Considered | Pros | Cons |
-| :--- | :--- | :--- |
-| **Burnout Trajectory Forecasting + LLM Explanation** | <ul><li>Directly addresses the stated problem</li><li>Built entirely from data the app already collects (workload %, completion consistency, overdue backlog, time-on-task)</li></ul> | Slightly harder to build correctly (needs the explanation layer to avoid sounding alarmist) |
-| **AI-Generated Visual Long-Term Goal Tracker** | <ul><li>Visually compelling concept</li><li>Clear tie to long-term motivation, which resonates with students</li></ul> | <ul><li>Weaker fit to problem stated because addresses motivation more than stress</li><li>Doesn't reduce workload or prevent burnout; it risks increasing pressure instead</li><li>Harder to make the AI generation reliably good in a short build window.</li></ul> |
-
-Burnout Trajectory Forecasting is chosen as it's more tightly coupled to problem statement and target group On Feasibility, it also comes out ahead: it reuses data and infrastructure, whereas the goal tracker introduces extra, more open-ended technical and design work. The the goal tracker loses on nearly every axis judges will actually score.
-
----
-### 3. Idea Evolution
-<img width="1920" height="1080" alt="codenection dump (1)" src="https://github.com/user-attachments/assets/6ef17bc9-63a4-47e8-b1fa-46e7f3c02eb1" />
-
-### 4. Feature Refinements & Iterations
+### 3. Feature Refinements & Iterations
 Our core features progressed through several key iterations based on technical checks and user flow refinement:
-
 
 ## Feature: Task Logging & Check-Ins
 
@@ -74,8 +98,18 @@ Our core features progressed through several key iterations based on technical c
 * **V2 (REFRAMED):** Reframed as Burnout Trajectory Forecasting. Projects the student's stress trajectory from behavioral data (workload %, completion consistency, overdue backlog, time-on-task), paired with an LLM explanation layer that interprets the forecast honestly and suggests one specific, actionable adjustment.
 
 ---
+### 4. Breadth of Exploration
+Before selecting our final approach, we evaluated multiple candidate concepts against feasibility and impact:
 
-### 4. Mentor Consultation & Feedback Integration
+| Concept Considered | Pros | Cons |
+| :--- | :--- | :--- |
+| **Burnout Trajectory Forecasting + LLM Explanation** | <ul><li>Directly addresses the stated problem</li><li>Built entirely from data the app already collects (workload %, completion consistency, overdue backlog, time-on-task)</li></ul> | Slightly harder to build correctly (needs the explanation layer to avoid sounding alarmist) |
+| **AI-Generated Visual Long-Term Goal Tracker** | <ul><li>Visually compelling concept</li><li>Clear tie to long-term motivation, which resonates with students</li></ul> | <ul><li>Weaker fit to problem stated because addresses motivation more than stress</li><li>Doesn't reduce workload or prevent burnout; it risks increasing pressure instead</li><li>Harder to make the AI generation reliably good in a short build window.</li></ul> |
+
+Burnout Trajectory Forecasting is chosen as it's more tightly coupled to problem statement and target group On Feasibility, it also comes out ahead: it reuses data and infrastructure, whereas the goal tracker introduces extra, more open-ended technical and design work. The the goal tracker loses on nearly every axis judges will actually score.
+
+---
+### 5. Mentor Consultation & Feedback Integration
 
 | Mentor / Role | Key Feedback Received | Action Taken & Changes Made |
 | :--- | :--- | :--- |
