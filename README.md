@@ -36,7 +36,7 @@ flowchart TD
     E -->|Yes| F{Which severity stage?}
     F -->|Stage 1: mild| G[Soothing suggestion]
     F -->|Stage 2: elevated| H[Soothing suggestion<br/>+ task breakdown]
-    F -->|Stage 3: critical| I[Recovery Mission: outdoor / social /<br/>sleep / "done enough today"]
+    F -->|Stage 3: critical| I[Recovery Mission: outdoor / social /<br/>sleep / 'done enough today']
     G --> B
     H --> B
     I --> B
