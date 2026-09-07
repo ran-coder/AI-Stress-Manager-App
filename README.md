@@ -28,11 +28,12 @@
 ### 2. Breadth of Exploration
 Before selecting our final approach, we evaluated multiple candidate concepts against feasibility and impact:
 
-| Concept Considered | Pros | Cons | Decision & Rationale |
-| :--- | :--- | :--- | :--- |
-| **Concept A:** [Brief Name] | Easy technical setup | Low novelty & differentiation | ❌ Dropped due to lack of distinct impact |
-| **Concept B:** [Brief Name] | High theoretical impact | Exceeds time & API rate limits | ❌ Dropped due to scope constraints |
-| **Final Concept:** [Project Name] | Strong target fit & high viability | Requires focused UI scope | ✅ Selected for development |
+| Concept Considered | Pros | Cons |
+| :--- | :--- | :--- |
+| **Burnout Trajectory Forecasting + LLM Explanation** | <ul><li>Directly addresses the stated problem</li><li>Built entirely from data the app already collects (workload %, completion consistency, overdue backlog, time-on-task)</li></ul> | Slightly harder to build correctly (needs the explanation layer to avoid sounding alarmist) |
+| **AI-Generated Visual Long-Term Goal Tracker** | <ul><li>Visually compelling concept</li><li>Clear tie to long-term motivation, which resonates with students</li></ul> | <ul><li>Weaker fit to problem stated because addresses motivation more than stress</li><li>Doesn't reduce workload or prevent burnout; it risks increasing pressure instead</li><li>Harder to make the AI generation reliably good in a short build window.</li></ul> |
+
+Burnout Trajectory Forecasting is chosen as it's more tightly coupled to problem statement and target group On Feasibility, it also comes out ahead: it reuses data and infrastructure, whereas the goal tracker introduces extra, more open-ended technical and design work. The the goal tracker loses on nearly every axis judges will actually score.
 
 ---
 ### 3. Idea Evolution
