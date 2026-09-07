@@ -36,7 +36,7 @@ Before selecting our final approach, we evaluated multiple candidate concepts ag
 
 ---
 ### 3. Idea Evolution
-<img width="1920" height="1080" alt="codenection dump" src="https://github.com/user-attachments/assets/c877c15b-4e15-4250-9011-e2af65d65ee7" />
+<img width="1920" height="1080" alt="codenection dump (1)" src="https://github.com/user-attachments/assets/6ef17bc9-63a4-47e8-b1fa-46e7f3c02eb1" />
 
 ### 4. Feature Refinements & Iterations
 Our core features progressed through several key iterations based on technical checks and user flow refinement:
