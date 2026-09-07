@@ -26,6 +26,7 @@
 # Visual App Workflow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "24px"}}}%%
 flowchart TD
     A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
 
@@ -60,7 +61,7 @@ flowchart TD
     Q -->|No| R[Agent adjusts<br/>remaining steps]
     R --> B
 
-    B -->|View Burnout Forecast| T[Burnout Forecast:<br/>stress trajectory graph]
+    B -->|   View Burnout Forecast| T[Burnout Forecast:<br/>stress trajectory graph]
     T --> U{Risk trending<br/>toward burnout?}
     U -->|Yes| V[Alert + LLM explanation<br/>+ recommendation]
     U -->|No| W[Stable status shown]
