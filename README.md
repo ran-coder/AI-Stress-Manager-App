@@ -27,7 +27,13 @@
 ---
 
 ### 2. Idea Evolution
+<img width="1920" height="1080" alt="codenection dump (4)" src="https://github.com/user-attachments/assets/06967f60-4bcd-4687-a4e4-79500d308933" />
+> **Diagram Description:**  
+> *This diagram shows the initial thought process ideation.")*
+
 <img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/347c4f44-fd85-44d3-940d-878c3ff09085" />
+> **Diagram Description:**  
+> *This diagram shows the summary of oterations made for this solution.")*
 
 ### 3. Feature Refinements & Iterations
 Our core features progressed through several key iterations based on technical checks and user flow refinement:
