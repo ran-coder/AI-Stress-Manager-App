@@ -64,7 +64,7 @@ Our core features progressed through several key iterations based on technical c
 
 ---
 ### 4. Breadth of Exploration
-Before selecting our final approach, we evaluated multiple candidate concepts against feasibility and impact:
+We evaluated several core candidate concepts against feasibility and impact:
 
 | Concept Considered | Pros | Cons |
 | :--- | :--- | :--- |
