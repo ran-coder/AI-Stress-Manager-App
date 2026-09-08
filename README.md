@@ -16,7 +16,7 @@
 ## 💡 Ideation Documentation
 
 ### 1. Visual Workflow
-*Below is the structural mapping of our solution architecture, and primary user journey.*
+*Below is the structural mapping of our final solution architecture, and primary user journey.*
 
 <img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
 
