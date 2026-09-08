@@ -33,9 +33,9 @@
       "curve": "linear"
     },
     "themeVariables": {
-      "fontSize": "40px",
+      "fontSize": "18px",
       "nodePadding": 15,
-      "edgeLabelBackground": "#000000"
+
     }
   }
 }%%
