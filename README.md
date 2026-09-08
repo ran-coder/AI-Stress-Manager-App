@@ -13,77 +13,17 @@
 
 ---
 
-## 💡 Ideation & Evolution
+## 💡 Ideation Documentation
 
-### 1. Mindmap & Visual Workflow
-*Below is the structural mapping of our problem space, solution architecture, and primary user journey.*
+### 1. Visual Workflow
+*Below is the structural mapping of our solution architecture, and primary user journey.*
 
-![Ideation Mindmap & User Flow](assets/ideation-mindmap.png)
+<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/5af545da-91c3-4478-9e21-6de20450e0fe" />
 
 > **Diagram Description:**  
-> *Briefly explain what the diagram above illustrates (e.g., "The mindmap above highlights the core problem branches identified, mapping user pain points directly to our target feature modules.")*
+> *This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature: task logging, the AI Task Coach, and Burnout Forecasting, branches out from and returns to this central point")*
 
-# Visual App Workflow
 
-```mermaid
-%%{
-  init: {
-    "flowchart": {
-      "htmlLabels": true,
-      "curve": "linear"
-    },
-    "themeVariables": {
-      "fontSize": "18px",
-      "nodePadding": 15,
-
-    }
-  }
-}%%
-flowchart TD
-    classDef default font-size:20px;
-    
-    linkStyle default stroke-width:3px;
-
-    A[Open App] --> B[Homepage: task logging,<br/>workload %, plan by priority,<br/>system monitors activity]
-
-    B -->|Log new task| C[Log Task]
-    C --> D[AI recalculates workload %]
-    D --> E{Workload exceeds<br/>threshold?}
-    E -->|No| J[Plan updated,<br/>no intervention]
-    E -->|Yes| F{Which severity stage?}
-    F -->|Stage 1: mild| G[Soothing suggestion]
-    F -->|Stage 2: elevated| H[Soothing suggestion<br/>+ task breakdown]
-    F -->|Stage 3: critical| I[Recovery Mission: outdoor / social /<br/>sleep / 'done enough today']
-    G --> B
-    H --> B
-    I --> B
-    J --> B
-
-    B --> L{Engagement signals suggest<br/>overwhelm on a specific task?}
-    L -->|No| B
-    L -->|Yes| M["Prompt surfaces on homepage:<br/>'Feeling overwhelmed by this one?'"]
-    M --> N{Student answers yes?}
-    N -->|No| B
-    N -->|Yes| K[Directed to AI Task Coach<br/>chatbot interface]
-
-    B -.->|Optional: student manually<br/>opens AI Task Coach| K2[AI Task Coach: chatbot interface]
-    K2 --> S[Student picks a task<br/>to break down]
-    S --> O
-
-    K --> O[Agentic AI immediately<br/>generates personalized plan]
-    O --> P[Checks back in later]
-    P --> Q{Steps completed<br/>as planned?}
-    Q -->|Yes| B
-    Q -->|No| R[Agent adjusts<br/>remaining steps]
-    R --> B
-
-    B --> |View Burnout Forecast| T[Burnout Forecast:<br/>stress trajectory graph]
-    T --> U{Risk trending<br/>toward burnout?}
-    U -->|Yes| V[Alert + LLM explanation<br/>+ recommendation]
-    U -->|No| W[Stable status shown]
-    V --> B
-    W --> B
-```
 ---
 
 ### 2. Idea Evolution
