@@ -18,7 +18,7 @@
 ### 1. Visual Workflow
 *Below is the structural mapping of our solution architecture, and primary user journey.*
 
-<img width="708" height="424" alt="Screenshot 2026-09-08 105421" src="https://github.com/user-attachments/assets/cdbe4200-2c6d-4018-9627-9fd427708bdd" />
+<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
 
 > **Diagram Description:**  
 > *This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature: task logging, the AI Task Coach, and Burnout Forecasting, branches out from and returns to this central point")*
