@@ -12,6 +12,14 @@
 * 📊 **Presentation Slides:** [Google Slides / Canva Presentation](https://docs.google.com/presentation/d/YOUR_SLIDES_LINK)
 
 ---
+## Project Overview 
+
+### The Problem.
+State the causes as you understand them, who the stakeholders are and briefly mention what similar apps exist in the market (at least one) and why they fall short.
+
+### Our Solution. 
+What it is in 3-4 sentences, then list out your feature-set
+
 
 ## 💡 Ideation Documentation
 
