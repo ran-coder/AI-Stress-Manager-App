@@ -96,5 +96,5 @@ System Activity Monitoring and Burnout Trajectory Forecasting are chosen because
 
 | Mentor / Role | Key Feedback Received | Action Taken & Changes Made |
 | :--- | :--- | :--- |
-| **[Mentor Name / Role]** | *"The main workflow takes too many steps for the user to reach value."* | Redesigned the primary interface flow in Figma to reduce user actions from 4 screens down to 2. |
-| **[Mentor Name / Role]** | *"Clarify how your solution differs from standard existing solutions."* | Highlighted our novel feature set and explicitly defined our target user constraints in the presentation slides. |
+| **Teh Ming En** | *"</li><li>Restructure the README.md contents so it looks more like a thought process ideation documentation rather than dumping everything there.</li><li>The UI/UX can make simple solutions stand out.</li><li>Place yourself in the target user's shoes and understand their pain points to deliver a good pitch presentation."* | </li><li>Reorganize README.md</li><li>Optimizing and priotizing UI/UX useability</li><li>Understand and draft a good pitch script. |
+
