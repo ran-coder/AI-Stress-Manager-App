@@ -47,6 +47,7 @@ Engagement and wellness extras (virtual study room, device time-out, mini-games)
 Working through that question, we refined the reactive layer and then integrated its pieces together:
  
 <img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/f2f56be5-bf96-4286-a6ce-95314bbe7942" />
+
 > **Diagram description:**
 > Evolution from Iteration 1 (simple workload log) through Iteration 2 (added AI reactive layer), Iteration 3 (refining Iteration 2's features based on severity and reframing the goal tracker), to Iteration 4 (integrating the behavioral check-in with the AI Task Coach).
  
@@ -58,7 +59,7 @@ These revisions converged into a single connected system, structured around one 
 <img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
 
 > **Diagram description:**
-> This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature — task logging, the AI Task Coach, and Burnout Forecasting — branches out from and returns to this central point.
+> This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub.
  
 ---
 ## Feature: Task Logging & Check-Ins
