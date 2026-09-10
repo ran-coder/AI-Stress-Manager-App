@@ -1,6 +1,6 @@
-# AI-Stress-Manager-App
+# FlowGuard: AI-Stress-Manager-App
 
-> **[One-line elevator pitch describing what your project does and the core problem it solves]**
+> **Flow Guard uses AI to monitor and forecast student behavior in real time — keeping workload in check, catching burnout before it happens, and stepping in with soothing recommendations and an AI Task Coach the moment things get rough.**
 
 ---
 
@@ -32,7 +32,7 @@ AI-powered workload stress manager built for university students who juggle ment
 ## 💡 Ideation & Thought Process
  
 ### Step 1 — Initial Ideation
-Iteration 1 started simple: students log tasks, the app calculates a workload percentage, and produces a priority-based task list. No reactive response yet — purely a passive log.
+Iteration 1 started simple: students log tasks, the app calculates a workload percentage, mood logging and produces a priority-based task list. No reactive response yet — purely a passive log.
  
 ### Step 2 — Identifying Weaknesses
 Moving to Iteration 2, we added an AI reactive layer: a workload threshold that triggers a recommendation, AI task breakdown for flagged complex tasks, and an AI-generated visual long-term goal tracker. Reviewing this version surfaced clear weaknesses:
@@ -46,7 +46,7 @@ Engagement and wellness extras (virtual study room, device time-out, mini-games)
 ### Step 3 — Revisions Made
 Working through that question, we refined the reactive layer and then integrated its pieces together:
  
-<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/f2f56be5-bf96-4286-a6ce-95314bbe7942" />
+<img width="1920" height="1080" alt="codenection dump (6)" src="https://github.com/user-attachments/assets/25b8aee9-f73a-4870-a3b5-5ea89efd1f1c" />
 
 > **Diagram description:**
 > Evolution from Iteration 1 (simple workload log) through Iteration 2 (added AI reactive layer), Iteration 3 (refining Iteration 2's features based on severity and reframing the goal tracker), to Iteration 4 (integrating the behavioral check-in with the AI Task Coach).
@@ -70,6 +70,9 @@ These revisions converged into a single connected system, structured around one 
 * **V3 (INTEGRATE):**  Instead of check-ins,  app passively tracks engagement signals (how many times a task is opened, edited, or ignored) to detect early signs of overwhelm. It surfaces a soft check-in: "Looks like you might be overwhelmed by this one?" If confirmed, the AI Task Coach is triggered automatically, generating a step-by-step breakdown personalized to the student's current workload and mental state.
 
 ---
+## Feature: Daily Mood Check-In
+
+* **V1:** Appears once, on the first app open of each day with three quick-tap suggestions (e.g. Good / Okay / Rough) plus an "Other" option. Feeds directly into the Burnout Trajectory Forecasting's LLM explanation layer. A skipped day is recorded as no data, not as a neutral/default answer.
 
 ## Feature: Staged Workload Intervention
 
@@ -90,23 +93,10 @@ These revisions converged into a single connected system, structured around one 
 
 * **V1:** Visual long-term goal tracker showing consequences of not focusing (countdown/percentage toward the goal).
 * **Problem identified:** A constant countdown creates **anxiety by design** and risks pushing students to work more → directly contradicting the app's stress-manager purpose.
-* **V2 (REFRAMED):** Reframed as Burnout Trajectory Forecasting. Projects the student's stress trajectory from behavioral data (workload %, completion consistency, overdue backlog, time-on-task), paired with an LLM explanation layer that interprets the forecast honestly and suggests one specific, actionable adjustment.
+* **V2 (REFRAMED):** Reframed as Burnout Trajectory Forecasting. Projects the student's stress trajectory from behavioral data (workload %, completion consistency, overdue backlog, time-on-task and mood logging), paired with an LLM explanation layer that interprets the forecast honestly and suggests one specific, actionable adjustment.
 
 ---
-### 4. Breadth of Exploration
-We evaluated several core candidate concepts against feasibility and impact:
-
-| Concept Considered | Pros | Cons |
-| :--- | :--- | :--- |
-| **Burnout Trajectory Forecasting + LLM Explanation** | <ul><li>Directly addresses the stated problem</li><li>Built entirely from data the app already collects (workload %, completion consistency, overdue backlog, time-on-task)</li></ul> | Slightly harder to build correctly (needs the explanation layer to avoid sounding alarmist) |
-| **AI-Generated Visual Long-Term Goal Tracker** | <ul><li>Visually compelling concept</li><li>Clear tie to long-term motivation, which resonates with students</li></ul> | <ul><li>Weaker fit to problem stated because addresses motivation more than stress</li><li>Doesn't reduce workload or prevent burnout; it risks increasing pressure instead</li><li>Harder to make the AI generation reliably good in a short build window.</li></ul> |
-| **Manual Prompt Check-Ins** | <ul><li>Zero False Positives: Intervention relies on explicit user confirmation</li><li>Preserves full user control and privacy | High Cognitive Load: Demands executive function and self-awareness from a student who is already overwhelmed.<br> |
-| **System Activity Monitoring** | <ul><li>Proactive Detection:Continuously identifies silent task avoidance, procrastination, and paralysi</li><li>Zero User Friction:Operates quietly in the background| False Alarm Risk: May misidentify normal breaks or non-linear study habits as task overwhelm if thresholds are poorly tuned.|
-
-System Activity Monitoring and Burnout Trajectory Forecasting are chosen because they are tightly coupled to the core problem statement and the realities of student burnout. On feasibility, this combination comes out ahead by reusing existing data and infrastructure (such as workload %, completion consistency, and interaction telemetry). In contrast, concepts like the AI-Generated Visual Goal Tracker add open-ended technical complexity and risk increasing pressure rather than relieving stress. Ultimately, System Activity Monitoring and Burnout Trajectory Forecasting align directly with the scoring criteria by delivering immediate, proactive intervention with minimal user friction.
-
----
-### 5. Mentor Consultation & Feedback Integration
+### 4. Mentor Consultation & Feedback Integration
 
 | Mentor / Role | Key Feedback Received | Action Taken & Changes Made |
 | :--- | :--- | :--- |
