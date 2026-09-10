@@ -14,11 +14,19 @@
 ---
 ## Project Overview 
 
-### The Problem.
-State the causes as you understand them, who the stakeholders are and briefly mention what similar apps exist in the market (at least one) and why they fall short.
+### The Problem
+University coursework is structured so that assignments and projects cluster heavily toward the end of the semester, while the first few weeks stay relatively light. This creates a sharp mismatch between workload and preparation time because when deadlines converge, students especially those balancing coursework with part-time jobs and student club activities are forced to split limited time and energy across multiple demanding tasks. The result is not just lower-quality work across the board, but significant anxiety from knowing they can't realistically do their best on everything at once, with universities and academic advisors ultimately absorbing the downstream effects through declining performance and burnout. 
 
-### Our Solution. 
-What it is in 3-4 sentences, then list out your feature-set
+Existing tools like [Todoist](https://www.todoist.com/) help with capturing and prioritizing tasks through a clean, fast interface, but they're built for general productivity rather than a personalized workload manager — there's no concept of workload intensity or energy capacity, no awareness of how a task is actually affecting the student beyond its due date, and no adaptive response when someone is clearly overwhelmed. Todoist optimizes for organization, not wellbeing, leaving the real stress of semester crunch entirely unaddressed.
+
+### Our Solution
+AI-powered workload stress manager built for university students who juggle mental, time, physical, social, and errand-based tasks with no system that reacts to how overwhelmed they actually are. Students log their tasks, and the AI continuously calculates a real-time workload percentage, escalating its response through staged interventions. Our system infers stress directly from behavior (task engagement, completion patterns, time-on-task) and responds proactively, including an agentic AI Task Coach that steps in the moment it detects a student struggling with a specific task. The result is a tool that manages workload and protects wellbeing at the same time, instead of treating productivity and mental health as separate problems.
+
+- **NLP-based task inference** — estimate complexity and duration directly from task description text, removing manual input
+- **Behavioral overwhelm pre-inference** — use engagement signals (opens, edits, ignores) to predict overwhelm before the student confirms it
+- **Personalized workload thresholds** — calibrate each student's baseline over time instead of a fixed global threshold
+- **Named forecasting method** — implement Burnout Trajectory Forecasting via a concrete lightweight model (e.g. moving average or linear regression)
+- **Multi-step AI Task Coach pipeline** — classify the task's blocker type first, then generate a tailored breakdown, rather than a single LLM call
 
 
 ## 💡 Ideation Documentation
