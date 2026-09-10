@@ -45,18 +45,18 @@ Engagement and wellness extras (virtual study room, device time-out, mini-games)
  
 ### Step 3 — Revisions Made
 Working through that question, we refined the reactive layer and then integrated its pieces together:
-
-<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/d8bcb3a9-1d44-4cb0-aafd-1e3af1d983f7" />
+ 
+<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/f2f56be5-bf96-4286-a6ce-95314bbe7942" />
 > **Diagram description:**
 > Evolution from Iteration 1 (simple workload log) through Iteration 2 (added AI reactive layer), Iteration 3 (refining Iteration 2's features based on severity and reframing the goal tracker), to Iteration 4 (integrating the behavioral check-in with the AI Task Coach).
  
 - **Iteration 3 →** Workload threshold recommendations and their frequency are now based on severity stage. The AI Task Coach became agentic, running a multi-step reasoning loop in a chatbot-style interface to generate an adaptive, personalized plan. The goal tracker was reframed into **Burnout Trajectory Forecasting** with an LLM explanation layer.
 - **Iteration 4 →** Integrated the behavioral check-in with the AI Task Coach: the app passively tracks engagement signals (opens, edits, ignores) and asks "Looks like you might be overwhelmed by this one?" If confirmed, the AI Task Coach auto-generates a step-by-step breakdown personalized to current workload and mental state.
-
 ### Step 4 — Final Architecture
 These revisions converged into a single connected system, structured around one central homepage hub that every feature branches from and returns to.
+ 
+<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
 
-<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/4bd78c2d-fce2-43ee-8626-aa758f1ef351" />
 > **Diagram description:**
 > This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature — task logging, the AI Task Coach, and Burnout Forecasting — branches out from and returns to this central point.
  
