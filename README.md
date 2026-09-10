@@ -29,33 +29,38 @@ AI-powered workload stress manager built for university students who juggle ment
 - **Multi-step AI Task Coach pipeline** — classify the task's blocker type first, then generate a tailored breakdown, rather than a single LLM call
 
 
-## 💡 Ideation Documentation
+## 💡 Ideation & Thought Process
+ 
+### Step 1 — Initial Ideation
+Iteration 1 started simple: students log tasks, the app calculates a workload percentage, and produces a priority-based task list. No reactive response yet — purely a passive log.
+ 
+### Step 2 — Identifying Weaknesses
+Moving to Iteration 2, we added an AI reactive layer: a workload threshold that triggers a recommendation, AI task breakdown for flagged complex tasks, and an AI-generated visual long-term goal tracker. Reviewing this version surfaced clear weaknesses:
+ 
+- A single on/off workload threshold treats mild and severe stress the same way, with no proportional response.
+- The goal tracker's constant countdown creates anxiety by design and risks pushing students to work *more* — directly contradicting the app's purpose as a stress manager.
+This also raised a broader question we hadn't yet answered: **"Implementing more AI? (NLP / CV / RAG / Agentic)"** — could a more AI-driven mechanism replace these weaker points and make the solution genuinely more novel?
+ 
+Engagement and wellness extras (virtual study room, device time-out, mini-games) were also considered at this stage, but were deprioritized since their UI/UX build effort felt too heavy relative to their impact.
+ 
+### Step 3 — Revisions Made
+Working through that question, we refined the reactive layer and then integrated its pieces together:
 
-### 1. Visual Workflow
-*Below is the structural mapping of our final solution architecture, and primary user journey.*
+<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/d8bcb3a9-1d44-4cb0-aafd-1e3af1d983f7" />
+> **Diagram description:**
+> Evolution from Iteration 1 (simple workload log) through Iteration 2 (added AI reactive layer), Iteration 3 (refining Iteration 2's features based on severity and reframing the goal tracker), to Iteration 4 (integrating the behavioral check-in with the AI Task Coach).
+ 
+- **Iteration 3 →** Workload threshold recommendations and their frequency are now based on severity stage. The AI Task Coach became agentic, running a multi-step reasoning loop in a chatbot-style interface to generate an adaptive, personalized plan. The goal tracker was reframed into **Burnout Trajectory Forecasting** with an LLM explanation layer.
+- **Iteration 4 →** Integrated the behavioral check-in with the AI Task Coach: the app passively tracks engagement signals (opens, edits, ignores) and asks "Looks like you might be overwhelmed by this one?" If confirmed, the AI Task Coach auto-generates a step-by-step breakdown personalized to current workload and mental state.
 
-<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
+### Step 4 — Final Architecture
+These revisions converged into a single connected system, structured around one central homepage hub that every feature branches from and returns to.
 
-> **Diagram Description:**  
-> *This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature: task logging, the AI Task Coach, and Burnout Forecasting, branches out from and returns to this central point")*
-
-
+<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/4bd78c2d-fce2-43ee-8626-aa758f1ef351" />
+> **Diagram description:**
+> This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub. Every feature — task logging, the AI Task Coach, and Burnout Forecasting — branches out from and returns to this central point.
+ 
 ---
-
-### 2. Idea Evolution
-<img width="1920" height="1080" alt="codenection dump (4)" src="https://github.com/user-attachments/assets/06967f60-4bcd-4687-a4e4-79500d308933" />
-
-> **Diagram Description:**  
-> *This diagram shows the initial thought process ideation.*
-
-<img width="1920" height="1080" alt="codenection dump (2)" src="https://github.com/user-attachments/assets/347c4f44-fd85-44d3-940d-878c3ff09085" />
-
-> **Diagram Description:**  
-> *This diagram shows the summary of every iterations made.*
-
-### 3. Feature Refinements & Iterations
-Our core features progressed through several key iterations based on technical checks and user flow refinement:
-
 ## Feature: Task Logging & Check-Ins
 
 * **V1:** Task logging + workload % calculation + basic plan output
