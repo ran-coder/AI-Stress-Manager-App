@@ -56,7 +56,7 @@ Working through that question, we refined the reactive layer and then integrated
 ### Step 4 — Final Architecture
 These revisions converged into a single connected system, structured around one central homepage hub that every feature branches from and returns to.
  
-<img width="3713" height="2241" alt="Add text" src="https://github.com/user-attachments/assets/154d9e05-3697-4794-8c35-5298ab703af2" />
+<img width="1920" height="1080" alt="Student_Wellness_System_Flow pptx" src="https://github.com/user-attachments/assets/bc68b2d6-2887-4498-8b6c-73ef0d17ba97" />
 
 > **Diagram description:**
 > This diagram maps the complete user journey from opening the app to completing a task, centered on the homepage as the main hub.
